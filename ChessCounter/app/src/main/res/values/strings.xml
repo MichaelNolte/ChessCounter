@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ChessCounter</string>
+    <string name="app_title">CHESS COUNTER 1:0</string>
+    <string name="player_a">PLAYER A</string>
+    <string name="player_b">PLAYER B</string>
+
+
+    <string name="initial_king_queen">1</string>
+    <string name="initial_knight_bishop_rook">2</string>
+    <string name="initial_pawn">10</string>
+
+    <string name="reinfield_title">REINFIELD VALUES</string>
+    <string name="initial_score_value">1.0</string>
+    <string name="value_divider">" : "</string>
+
+    <string name="credit">Icon made by Freepik from www.flaticon.com</string>
+
+</resources>

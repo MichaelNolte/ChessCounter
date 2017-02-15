@@ -1,0 +1,120 @@
+<resources>
+
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+    <!-- Container styles -->
+
+    <style name="vertical_layout">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="vertical_layout.divider">
+        <item name="android:showDividers">middle</item>
+        <item name="android:divider">@drawable/divider</item>
+    </style>
+
+    <style name="horizontally_centered">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="horizontally_centered.padding">
+        <item name="android:padding">@dimen/standard_padding</item>
+    </style>
+
+    <style name="horizontal_layout_padding_bottom">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingBottom">@dimen/standard_padding_2x</item>
+    </style>
+
+    <!-- Figure score styles -->
+
+    <style name="title_text">
+        <item name="android:padding">@dimen/standard_padding</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:background">@color/dividerColor</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+    <style name="title_text_player">
+        <item name="android:padding">@dimen/standard_padding</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif-bold</item>
+        <item name="android:background">@color/dividerColor</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="image_layout">
+        <item name="android:layout_marginLeft">@dimen/icon_margin_left</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="figure_number_field">
+        <item name="android:layout_marginRight">@dimen/figure_number_margin_right</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="minus_button">
+        <item name="android:text">-</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="plus_button">
+        <item name="android:text">+</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="reset_button">
+        <item name="android:text">R</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+
+
+    <!-- Reinfeld value styles -->
+
+    <style name="reinfeld_text">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="reinfeld_text.title">
+        <item name="android:text">@string/reinfield_title</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:padding">@dimen/standard_padding</item>
+        <item name="android:background">@color/dividerColor</item>
+        <item name="android:fontFamily">sans-serif-bold</item>
+    </style>
+
+    <style name="reinfeld_text.value">
+        <item name="android:text">@string/initial_score_value</item>
+        <item name="android:textSize">@dimen/large_text_size</item>
+    </style>
+
+    <style name="reinfeld_text.divider">
+        <item name="android:text">@string/value_divider</item>
+    </style>
+
+
+    <style name="credit">
+        <item name="android:paddingTop">@dimen/standard_padding_2x</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textSize">@dimen/credit_text_size</item>
+        <item name="android:background">@color/dividerColor</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+</resources>

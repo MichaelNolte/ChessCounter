@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    tools:context="com.example.android.chesscounter.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/vertical_layout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_title"
+            style="@style/title_text"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/vertical_layout">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/vertical_layout.divider">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/player_a"
+                    style="@style/title_text_player"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:contentDescription="this is the number of white kings"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/button_size"
+                        android:src="@drawable/white_king"
+                        style="@style/image_layout"/>
+
+                    <TextView
+                        android:id="@+id/kings_player_a"
+                        android:layout_width="@dimen/figure_number_width"
+                        android:layout_height="@dimen/button_size"
+                        android:text="@string/initial_king_queen"
+                        style="@style/figure_number_field"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="minusWhiteKing"
+                        style="@style/minus_button"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="plusWhiteKing"
+                        style="@style/reset_button"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/button_size"
+                        android:src="@drawable/white_queen"
+                        style="@style/image_layout"/>
+
+                    <TextView
+                        android:id="@+id/queens_player_a"
+                        android:layout_width="@dimen/figure_number_width"
+                        android:layout_height="@dimen/button_size"
+                        android:text="@string/initial_king_queen"
+                        style="@style/figure_number_field"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="minusWhiteQueen"
+                        style="@style/minus_button"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="plusWhiteQueen"
+                        style="@style/plus_button"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/button_size"
+                        android:src="@drawable/white_knight"
+                        style="@style/image_layout"/>
+
+                    <TextView
+                        android:id="@+id/knights_player_a"
+                        android:layout_width="@dimen/figure_number_width"
+                        android:layout_height="@dimen/button_size"
+                        android:text="@string/initial_knight_bishop_rook"
+                        style="@style/figure_number_field"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="minusWhiteKnight"
+                        style="@style/minus_button"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="plusWhiteKnight"
+                        style="@style/plus_button"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/button_size"
+                        android:src="@drawable/white_bishop"
+                        style="@style/image_layout"/>
+
+                    <TextView
+                        android:id="@+id/bishops_player_a"
+                        android:layout_width="@dimen/figure_number_width"
+                        android:layout_height="@dimen/button_size"
+                        android:text="@string/initial_knight_bishop_rook"
+                        style="@style/figure_number_field"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="minusWhiteBishop"
+                        style="@style/minus_button"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="plusWhiteBishop"
+                        style="@style/plus_button"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/button_size"
+                        android:src="@drawable/white_rook"
+                        style="@style/image_layout"/>
+
+                    <TextView
+                        android:id="@+id/rooks_player_a"
+                        android:layout_width="@dimen/figure_number_width"
+                        android:layout_height="@dimen/button_size"
+                        android:text="@string/initial_knight_bishop_rook"
+                        style="@style/figure_number_field"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="minusWhiteRook"
+                        style="@style/minus_button"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="plusWhiteRook"
+                        style="@style/plus_button"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/horizontal_layout_padding_bottom">
+
+                    <ImageView
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/button_size"
+                        android:src="@drawable/white_pawn"
+                        style="@style/image_layout"/>
+
+                    <TextView
+                        android:id="@+id/pawns_player_a"
+                        android:layout_width="@dimen/figure_number_width"
+                        android:layout_height="@dimen/button_size"
+                        android:text="@string/initial_pawn"
+                        style="@style/figure_number_field"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="minusWhitePawn"
+                        style="@style/minus_button"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="plusWhitePawn"
+                        style="@style/plus_button"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/dividerColor"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/vertical_layout.divider">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/player_b"
+                    style="@style/title_text_player"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/button_size"
+                        android:src="@drawable/ic_king"
+                        style="@style/image_layout"/>
+
+                    <TextView
+                        android:id="@+id/kings_player_b"
+                        android:layout_width="@dimen/figure_number_width"
+                        android:layout_height="@dimen/button_size"
+                        android:text="@string/initial_king_queen"
+                        style="@style/figure_number_field"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="minusBlackKing"
+                        style="@style/minus_button"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="plusBlackKing"
+                        style="@style/reset_button"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/button_size"
+                        android:src="@drawable/ic_queen"
+                        style="@style/image_layout"/>
+
+                    <TextView
+                        android:id="@+id/queens_player_b"
+                        android:layout_width="@dimen/figure_number_width"
+                        android:layout_height="@dimen/button_size"
+                        android:text="@string/initial_king_queen"
+                        style="@style/figure_number_field"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="minusBlackQueen"
+                        style="@style/minus_button"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="plusBlackQueen"
+                        style="@style/plus_button"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/button_size"
+                        android:src="@drawable/ic_knight"
+                        style="@style/image_layout"/>
+
+                    <TextView
+                        android:id="@+id/knights_player_b"
+                        android:layout_width="@dimen/figure_number_width"
+                        android:layout_height="@dimen/button_size"
+                        android:text="@string/initial_knight_bishop_rook"
+                        style="@style/figure_number_field"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="minusBlackKnight"
+                        style="@style/minus_button"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="plusBlackKnight"
+                        style="@style/plus_button"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/button_size"
+                        android:src="@drawable/ic_bishop"
+                        style="@style/image_layout"/>
+
+                    <TextView
+                        android:id="@+id/bishops_player_b"
+                        android:layout_width="@dimen/figure_number_width"
+                        android:layout_height="@dimen/button_size"
+                        android:text="@string/initial_knight_bishop_rook"
+                        style="@style/figure_number_field"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="minusBlackBishop"
+                        style="@style/minus_button"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="plusBlackBishop"
+                        style="@style/plus_button"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/button_size"
+                        android:src="@drawable/ic_rook"
+                        style="@style/image_layout"/>
+
+                    <TextView
+                        android:id="@+id/rooks_player_b"
+                        android:layout_width="@dimen/figure_number_width"
+                        android:layout_height="@dimen/button_size"
+                        android:text="@string/initial_knight_bishop_rook"
+                        style="@style/figure_number_field"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="minusBlackRook"
+                        style="@style/minus_button"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="plusBlackRook"
+                        style="@style/plus_button"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/horizontal_layout_padding_bottom">
+
+                    <ImageView
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/button_size"
+                        android:src="@drawable/ic_pawn"
+                        style="@style/image_layout"/>
+
+                    <TextView
+                        android:id="@+id/pawns_player_b"
+                        android:layout_width="@dimen/figure_number_width"
+                        android:layout_height="@dimen/button_size"
+                        android:text="@string/initial_pawn"
+                        style="@style/figure_number_field"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="minusBlackPawn"
+                        style="@style/minus_button"/>
+
+                    <Button
+                        android:layout_width="@dimen/button_size"
+                        android:layout_height="match_parent"
+                        android:onClick="plusBlackPawn"
+                        style="@style/plus_button"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/reinfeld_text.title"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/horizontally_centered.padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/reinfeld_text.value"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/reinfeld_text.divider"/>
+
+                <TextView
+                    android:id="@+id/player_a_vs_b_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/reinfeld_text.value"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/dividerColor"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/horizontally_centered.padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/reinfeld_text.value"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/reinfeld_text.divider"/>
+
+                <TextView
+                    android:id="@+id/player_b_vs_a_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/reinfeld_text.value"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/credit"
+            style="@style/credit"/>
+    </LinearLayout>
+</ScrollView>
